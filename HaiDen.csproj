@@ -1,0 +1,1057 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E96DC7D2-0783-4435-8262-EECD81BDE591}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HaiDen</RootNamespace>
+    <AssemblyName>HaiDen</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.4.2.5\lib\net45\ImageResizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="UrlRewritingNet.UrlRewriter, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UrlRewritingNet.2.0.7\lib\UrlRewritingNet.UrlRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\About_Us.aspx" />
+    <Content Include="Admin\Admin.aspx" />
+    <Content Include="Admin\AjaxUpload\css\style.css" />
+    <Content Include="Admin\AjaxUpload\img\border-image.png" />
+    <Content Include="Admin\AjaxUpload\img\icons.png" />
+    <Content Include="Admin\AjaxUpload\js\jquery.fileupload.js" />
+    <Content Include="Admin\AjaxUpload\js\jquery.iframe-transport.js" />
+    <Content Include="Admin\AjaxUpload\js\jquery.knob.js" />
+    <Content Include="Admin\AjaxUpload\js\jquery.ui.widget.js" />
+    <Content Include="Admin\AjaxUpload\js\script.js" />
+    <Content Include="Admin\App_Control\Header1.ascx" />
+    <Content Include="Admin\App_Control\Menus.ascx" />
+    <Content Include="Admin\App_Control\Notification.ascx" />
+    <Content Include="Admin\Banner.aspx" />
+    <Content Include="Admin\Bin\CuteEditor.dll" />
+    <Content Include="Admin\Bin\CuteEditor.ImageEditor.dll" />
+    <Content Include="Admin\Bin\ImageResizer.dll" />
+    <Content Include="Admin\Bin\ImageResizer.pdb" />
+    <Content Include="Admin\Bin\ImageResizer.xml" />
+    <Content Include="Admin\Bin\Microsoft.JScript.dll" />
+    <Content Include="Admin\Bin\NetSpell.SpellChecker.dll" />
+    <Content Include="Admin\Bin\Newtonsoft.Json.dll" />
+    <Content Include="Admin\Bin\Newtonsoft.Json.xml" />
+    <Content Include="Admin\Bin\UrlRewritingNet.UrlRewriter.dll" />
+    <Content Include="Admin\bower_components\animate.css\animate.min.css" />
+    <Content Include="Admin\bower_components\autosize\autosize.min.js" />
+    <Content Include="Admin\bower_components\bootgrid\jquery.bootgrid.fa.min.js" />
+    <Content Include="Admin\bower_components\bootgrid\jquery.bootgrid.min.css" />
+    <Content Include="Admin\bower_components\bootgrid\jquery.bootgrid.min.js" />
+    <Content Include="Admin\bower_components\bootgrid\jquery.bootgrid.updated.min.js" />
+    <Content Include="Admin\bower_components\bootstrap-datepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Admin\bower_components\bootstrap-datepicker\bootstrap-datetimepicker.min.css" />
+    <Content Include="Admin\bower_components\bootstrap-datepicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="Admin\bower_components\bootstrap-select\bootstrap-select.css" />
+    <Content Include="Admin\bower_components\bootstrap-select\bootstrap-select.js" />
+    <Content Include="Admin\bower_components\bootstrap-sweetalert\sweet-alert.css" />
+    <Content Include="Admin\bower_components\bootstrap-sweetalert\sweet-alert.min.js" />
+    <Content Include="Admin\bower_components\bootstrap\bootstrap-growl.min.js" />
+    <Content Include="Admin\bower_components\bootstrap\bootstrap.min.js" />
+    <Content Include="Admin\bower_components\chosen\chosen-sprite.png" />
+    <Content Include="Admin\bower_components\chosen\chosen.jquery.min.js" />
+    <Content Include="Admin\bower_components\chosen\chosen.min.css" />
+    <Content Include="Admin\bower_components\flot-charts\curved-line-chart.js" />
+    <Content Include="Admin\bower_components\flot-charts\line-chart.js" />
+    <Content Include="Admin\bower_components\flot\curvedLines.js" />
+    <Content Include="Admin\bower_components\flot\jquery.flot.js" />
+    <Content Include="Admin\bower_components\flot\jquery.flot.resize.js" />
+    <Content Include="Admin\bower_components\fullcalendar\fullcalendar.min.css" />
+    <Content Include="Admin\bower_components\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Admin\bower_components\Gallery\jquery.blueimp-gallery.min.js" />
+    <Content Include="Admin\bower_components\google-material-color\palette.css" />
+    <Content Include="Admin\bower_components\input-mask\input-mask.min.js" />
+    <Content Include="Admin\bower_components\javascriptCanvasToBlobs\canvas-to-blob.min.js" />
+    <Content Include="Admin\bower_components\javascriptLoadImages\load-image.all.min.js" />
+    <Content Include="Admin\bower_components\jquery.easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\css\demo-ie8.css" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\css\demo.css" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\css\jquery.fileupload-noscript.css" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\css\jquery.fileupload-ui-noscript.css" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\css\jquery.fileupload-ui.css" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\css\jquery.fileupload.css" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\css\style.css" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\img\loading.gif" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\img\progressbar.gif" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\app.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\cors\jquery.postmessage-transport.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\cors\jquery.xdr-transport.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.fileupload-angular.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.fileupload-audio.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.fileupload-image.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.fileupload-jquery-ui.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.fileupload-process.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.fileupload-ui.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.fileupload-validate.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.fileupload-video.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.fileupload.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\jquery.iframe-transport.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\main.js" />
+    <Content Include="Admin\bower_components\jqueryFileUpload\js\vendor\jquery.ui.widget.js" />
+    <Content Include="Admin\bower_components\jquery\jquery.min.js" />
+    <Content Include="Admin\bower_components\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Admin\bower_components\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.min.css" />
+    <Content Include="Admin\bower_components\material-design-iconic-font\material-design-iconic-font.min.css" />
+    <Content Include="Admin\bower_components\moment\moment.min.js" />
+    <Content Include="Admin\bower_components\noUiSlider.8.5.1\jquery.nouislider.all.min.js" />
+    <Content Include="Admin\bower_components\noUiSlider.8.5.1\jquery.nouislider.min.css" />
+    <Content Include="Admin\bower_components\noUiSlider.8.5.1\nouislider.css" />
+    <Content Include="Admin\bower_components\noUiSlider.8.5.1\nouislider.js" />
+    <Content Include="Admin\bower_components\noUiSlider.8.5.1\nouislider.min.css" />
+    <Content Include="Admin\bower_components\noUiSlider.8.5.1\nouislider.min.js" />
+    <Content Include="Admin\bower_components\noUiSlider.8.5.1\nouislider.pips.css" />
+    <Content Include="Admin\bower_components\noUiSlider.8.5.1\nouislider.tooltips.css" />
+    <Content Include="Admin\bower_components\salvattore\salvattore.min.js" />
+    <Content Include="Admin\bower_components\simpleWeather\jquery.simpleWeather.min.js" />
+    <Content Include="Admin\bower_components\sparklines\jquery.sparkline.min.js" />
+    <Content Include="Admin\bower_components\Waves\waves.min.js" />
+    <Content Include="Admin\Bride_stories.aspx" />
+    <Content Include="Admin\Bride_stories_cate.aspx" />
+    <Content Include="Admin\Collections.aspx" />
+    <Content Include="Admin\FAQS.aspx" />
+    <Content Include="Admin\FAQ_Cate.aspx" />
+    <Content Include="Admin\Images_Product.aspx" />
+    <Content Include="Admin\img\aZlqiAT.jpg" />
+    <Content Include="Admin\img\demo\note.png" />
+    <Content Include="Admin\img\favicon.png" />
+    <Content Include="Admin\img\haidenlogo.png" />
+    <Content Include="Admin\img\haidenlogo_bl.png" />
+    <Content Include="Admin\img\profile-pics\1.jpg" />
+    <Content Include="Admin\img\profile-pics\2.jpg" />
+    <Content Include="Admin\img\profile-pics\3.jpg" />
+    <Content Include="Admin\img\profile-pics\4.jpg" />
+    <Content Include="Admin\img\profile-pics\5.jpg" />
+    <Content Include="Admin\img\profile-pics\6.jpg" />
+    <Content Include="Admin\img\profile-pics\7.jpg" />
+    <Content Include="Admin\img\profile-pics\8.jpg" />
+    <Content Include="Admin\img\profile-pics\9.jpg" />
+    <Content Include="Admin\img\profile-pics\profile-pic.jpg" />
+    <Content Include="Admin\img\select.png" />
+    <Content Include="Admin\Index.aspx" />
+    <Content Include="Admin\Info.aspx" />
+    <Content Include="Admin\Inquiries.aspx" />
+    <Content Include="Admin\LogIn.aspx" />
+    <Content Include="Admin\News.aspx" />
+    <Content Include="Admin\OrderProcess.aspx" />
+    <Content Include="Admin\Scripts\actions.js" />
+    <Content Include="Admin\Scripts\ajaxupload.js" />
+    <Content Include="Admin\Scripts\charts.js" />
+    <Content Include="Admin\Scripts\demo.js" />
+    <Content Include="Admin\Scripts\functions.js" />
+    <Content Include="Admin\Scripts\handlers.js" />
+    <Content Include="Admin\Scripts\image-picker.min.js" />
+    <Content Include="Admin\Scripts\jQuery.1.4.3.js" />
+    <Content Include="Admin\Scripts\jquery.validate.js" />
+    <Content Include="Admin\Scripts\summernote-image-attributes.js" />
+    <Content Include="Admin\Scripts\summernote.js" />
+    <Content Include="Admin\Styles\app.min.1.css" />
+    <Content Include="Admin\Styles\app.min.2.css" />
+    <Content Include="Admin\Styles\color\blue.css" />
+    <Content Include="Admin\Styles\color\red.css" />
+    <Content Include="Admin\Styles\image_pop.css" />
+    <Content Include="Admin\Styles\responsive.css" />
+    <Content Include="Admin\Styles\Style.css" />
+    <Content Include="Admin\Styles\summernote.css" />
+    <Content Include="Admin\Up_Img_Product.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="Admin\Wedding_Dress.aspx" />
+    <Content Include="Assets\css\addons\datatables.css" />
+    <Content Include="Assets\css\addons\datatables.min.css" />
+    <Content Include="Assets\css\bootstrap.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\mdb.css" />
+    <Content Include="Assets\css\mdb.min.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\css\style.min.css" />
+    <Content Include="Assets\font\GeosansLight\GeosansLight.svg" />
+    <Content Include="Assets\HinhAnh\AboutUs\1.jpg" />
+    <Content Include="Assets\HinhAnh\AboutUs\2_1.jpg" />
+    <Content Include="Assets\HinhAnh\AboutUs\a3.jpg" />
+    <Content Include="Assets\HinhAnh\AboutUs\o2.jpg" />
+    <Content Include="Assets\HinhAnh\AboutUs\o3.jpg" />
+    <Content Include="Assets\HinhAnh\AboutUs\o4.jpg" />
+    <Content Include="Assets\HinhAnh\AboutUs\thum.jpg" />
+    <Content Include="Assets\HinhAnh\Admins\15932162882_f3ad0faf47_k.jpg" />
+    <Content Include="Assets\HinhAnh\Admins\19239070691_b449ae72cd_k.jpg" />
+    <Content Include="Assets\HinhAnh\Admins\24518892231_3a0c3771cc_k.jpg" />
+    <Content Include="Assets\HinhAnh\Admins\macossierrawallpapermacbookwallpaper.jpg" />
+    <Content Include="Assets\HinhAnh\Banners\head_image.jpg" />
+    <Content Include="Assets\HinhAnh\Banners\tth_0755.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\1.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\1_1.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\2.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\67242026_1099702760240954_4098344908664864768_o.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\68725420_2390419717947332_3598764015125266432_n.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\69541350_2483777271909431_7865068477508222976_n.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\christinebentz2.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\christinebentz2_1.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\christinebentz3.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\christinebentz4.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\christinebentz5.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\demi2.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\o3.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\thumb.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\tth_0534.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\tth_0534_1.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\tth_0585.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\tth_0602.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\tth_9942_1.jpg" />
+    <Content Include="Assets\HinhAnh\BrideStories\tth_9942_2.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\1200x628.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\192.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\38761808_1710198112443204_5386595412519944192_n.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\38793869_1710197989109883_6171017746856280064_n.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\600x400.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\akiko2.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\akiko4.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\autumn1.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\autumn2.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\autumn2.png" />
+    <Content Include="Assets\HinhAnh\Collections\autumn2_1.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\autumn2_2.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\autumn3.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\autumn3_1.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\autumn4.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\berry1.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\berry1_1.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\bridget3.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\bst4.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\bst4a.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\bst4a_1.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\bst4_1.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\bts3.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\demi3.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\demi4.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\img_7971.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8004.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8079.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8079_1.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8127.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8141.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8153.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8153_1.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8263.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8288.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8321.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\img_8535.JPG" />
+    <Content Include="Assets\HinhAnh\Collections\macossierrawallpapermacbookwallpaper.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\thum.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\tth_0204.png" />
+    <Content Include="Assets\HinhAnh\Collections\tth_0237_1.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\tth_0250.png" />
+    <Content Include="Assets\HinhAnh\Collections\tth_0255_1.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\tth_0341.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\tth_0468.png" />
+    <Content Include="Assets\HinhAnh\Collections\tth_0548.jpg" />
+    <Content Include="Assets\HinhAnh\Collections\tth_0577.png" />
+    <Content Include="Assets\HinhAnh\News\1479525915515321.jpg" />
+    <Content Include="Assets\HinhAnh\News\3e8720c195a5d0e9ed6337238d729c64.jpg" />
+    <Content Include="Assets\HinhAnh\News\mh2.jpg" />
+    <Content Include="Assets\HinhAnh\News\news.jpg" />
+    <Content Include="Assets\HinhAnh\News\pronoviassponsored04.jpg" />
+    <Content Include="Assets\HinhAnh\News\thuhagiotraidate200317.jpg" />
+    <Content Include="Assets\HinhAnh\News\tth.png" />
+    <Content Include="Assets\HinhAnh\News\tth_0320.png" />
+    <Content Include="Assets\HinhAnh\OrderProcess\image.png" />
+    <Content Include="Assets\HinhAnh\OrderProcess\img_8542.JPG" />
+    <Content Include="Assets\HinhAnh\OrderProcess\img_8799.JPG" />
+    <Content Include="Assets\HinhAnh\OrderProcess\o1.jpg" />
+    <Content Include="Assets\HinhAnh\OrderProcess\o2.jpg" />
+    <Content Include="Assets\HinhAnh\OrderProcess\o3.jpg" />
+    <Content Include="Assets\HinhAnh\OrderProcess\o4.jpg" />
+    <Content Include="Assets\HinhAnh\OrderProcess\tth_0685.jpg" />
+    <Content Include="Assets\HinhAnh\OrderProcess\tth_9582.jpg" />
+    <Content Include="Assets\HinhAnh\Users\1dd34cf0ee7393aaf31b0dd69ccf5503.jpg" />
+    <Content Include="Assets\HinhAnh\Users\2.jpg" />
+    <Content Include="Assets\HinhAnh\Users\31902176_1722690831156650_1491083950771142656_n.jpg" />
+    <Content Include="Assets\HinhAnh\Users\3e8720c195a5d0e9ed6337238d729c64.jpg" />
+    <Content Include="Assets\HinhAnh\Users\48419231_1377825365718727_7610458065967513600_n.png" />
+    <Content Include="Assets\HinhAnh\Users\67093127_1099702773574286_5483491369366323200_n.jpg" />
+    <Content Include="Assets\HinhAnh\Users\67242026_1099702760240954_4098344908664864768_o.jpg" />
+    <Content Include="Assets\HinhAnh\Users\Amber-%282%29.jpg" />
+    <Content Include="Assets\HinhAnh\Users\Autumn-%283%29.jpg" />
+    <Content Include="Assets\HinhAnh\Users\German-Business-Etiquette.jpg" />
+    <Content Include="Assets\HinhAnh\Users\head.jpg" />
+    <Content Include="Assets\HinhAnh\Users\img_0559.JPG" />
+    <Content Include="Assets\HinhAnh\Users\Quoc Huy CHXHCNVN.png" />
+    <Content Include="Assets\img\back.png" />
+    <Content Include="Assets\img\close.svg" />
+    <Content Include="Assets\img\close_btn.png" />
+    <Content Include="Assets\img\lightbox\default-skin.png" />
+    <Content Include="Assets\img\lightbox\default-skin.svg" />
+    <Content Include="Assets\img\lightbox\preloader.gif" />
+    <Content Include="Assets\img\next.png" />
+    <Content Include="Assets\img\overlays\01.png" />
+    <Content Include="Assets\img\overlays\02.png" />
+    <Content Include="Assets\img\overlays\03.png" />
+    <Content Include="Assets\img\overlays\04.png" />
+    <Content Include="Assets\img\overlays\05.png" />
+    <Content Include="Assets\img\overlays\06.png" />
+    <Content Include="Assets\img\overlays\07.png" />
+    <Content Include="Assets\img\overlays\08.png" />
+    <Content Include="Assets\img\overlays\09.png" />
+    <Content Include="Assets\img\resource\faq_patten.png" />
+    <Content Include="Assets\img\resource\favicon.png" />
+    <Content Include="Assets\img\resource\logo-banner.jpg" />
+    <Content Include="Assets\img\resource\logo-banner.png" />
+    <Content Include="Assets\img\resource\logo.png" />
+    <Content Include="Assets\img\svg\arrow_left.svg" />
+    <Content Include="Assets\img\svg\arrow_right.svg" />
+    <Content Include="Assets\js\addons\datatables.js" />
+    <Content Include="Assets\js\addons\datatables.min.js" />
+    <Content Include="Assets\js\bootstrap.js" />
+    <Content Include="Assets\js\bootstrap.min.js" />
+    <Content Include="Assets\js\jquery-3.3.1.min.js" />
+    <Content Include="Assets\js\mdb.js" />
+    <Content Include="Assets\js\mdb.min.js" />
+    <Content Include="Assets\js\modules\chart.js" />
+    <Content Include="Assets\js\modules\enhanced-modals.js" />
+    <Content Include="Assets\js\modules\forms-free.js" />
+    <Content Include="Assets\js\modules\jquery.easing.js" />
+    <Content Include="Assets\js\modules\scrolling-navbar.js" />
+    <Content Include="Assets\js\modules\velocity.min.js" />
+    <Content Include="Assets\js\modules\waves.js" />
+    <Content Include="Assets\js\modules\wow.js" />
+    <Content Include="Assets\js\popper.min.js" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker.css" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker3.css" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Assets\plugins\datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="Assets\plugins\datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Assets\plugins\datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Assets\plugins\UploadImages\jquery.fileupload-audio.js" />
+    <Content Include="Assets\plugins\UploadImages\jquery.fileupload-image.js" />
+    <Content Include="Assets\plugins\UploadImages\jquery.fileupload-jquery-ui.js" />
+    <Content Include="Assets\plugins\UploadImages\jquery.fileupload-process.js" />
+    <Content Include="Assets\plugins\UploadImages\jquery.fileupload-ui.js" />
+    <Content Include="Assets\plugins\UploadImages\jquery.fileupload-validate.js" />
+    <Content Include="Assets\plugins\UploadImages\jquery.fileupload.css" />
+    <Content Include="Assets\plugins\UploadImages\jquery.fileupload.js" />
+    <Content Include="Assets\plugins\UploadImages\jquery.iframe-transport.js" />
+    <Content Include="Assets\plugins\UploadImages\main.js" />
+    <Content Include="Assets\plugins\UploadImages\vendor\jquery.ui.widget.js" />
+    <Content Include="Assets\scss\style.css" />
+    <Content Include="Assets\scss\style.min.css" />
+    <Content Include="Common\common.js" />
+    <Content Include="Common\No-image-available.jpg" />
+    <Content Include="Common\thumbnail-default.png" />
+    <Content Include="Scripts\AboutUs_Script.js" />
+    <Content Include="Scripts\Faq_Script.js" />
+    <Content Include="Scripts\Info_Script.js" />
+    <Content Include="Scripts\Inquiries_Script.js" />
+    <Content Include="Scripts\Users_Script.js" />
+    <Content Include="Scripts\WeddingDress_Script.js" />
+    <Content Include="Scripts\BrideStories_Script.js" />
+    <Content Include="Scripts\News_Script.js" />
+    <Content Include="Scripts\OrderProcess_Script.js" />
+    <Content Include="Scripts\Collection_Script.js" />
+    <Content Include="Scripts\Banner_Script.js" />
+    <Content Include="swfupload\swfupload.js" />
+    <Content Include="swfupload\swfupload.swf" />
+    <Content Include="swfupload\swfuploadbutton.swf" />
+    <Content Include="Views\AboutUs.aspx" />
+    <Content Include="Views\BridesStories.aspx" />
+    <Content Include="Views\BridesStoriesDetail.aspx" />
+    <Content Include="Views\Collections.aspx" />
+    <Content Include="Views\ContactUs.aspx" />
+    <Content Include="Views\Control\Footer.ascx" />
+    <Content Include="Views\Control\Header.ascx" />
+    <Content Include="Views\Dress.aspx" />
+    <Content Include="Views\FAQ.aspx" />
+    <Content Include="Views\Favorites.aspx" />
+    <Content Include="Views\index.aspx" />
+    <Content Include="Views\Member.aspx" />
+    <Content Include="Views\News.aspx" />
+    <Content Include="Views\NewsDetail.aspx" />
+    <Content Include="Views\OrderProcess.aspx" />
+    <Content Include="Views\PrivacyPolicy.aspx" />
+    <Content Include="Views\SignIn.aspx" />
+    <Content Include="Views\SignUp.aspx" />
+    <Content Include="Views\TermsConditions.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\About_Us.aspx.cs">
+      <DependentUpon>About_Us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\About_Us.aspx.designer.cs">
+      <DependentUpon>About_Us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHandleRq.ashx.cs">
+      <DependentUpon>AdminHandleRq.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHandler_list.ashx.cs">
+      <DependentUpon>AdminHandler_list.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AjaxUpload\Ajax_Upload.ashx.cs">
+      <DependentUpon>Ajax_Upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\App_Code\BLL.cs" />
+    <Compile Include="Admin\App_Code\DAO.cs" />
+    <Compile Include="Admin\App_Code\DataProvider.cs" />
+    <Compile Include="Admin\App_Code\DTO.cs" />
+    <Compile Include="Admin\App_Code\Thumbnail.cs" />
+    <Compile Include="Admin\App_Control\Header1.ascx.cs">
+      <DependentUpon>Header1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\App_Control\Header1.ascx.designer.cs">
+      <DependentUpon>Header1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\App_Control\Menus.ascx.cs">
+      <DependentUpon>Menus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\App_Control\Menus.ascx.designer.cs">
+      <DependentUpon>Menus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\App_Control\Notification.ascx.cs">
+      <DependentUpon>Notification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\App_Control\Notification.ascx.designer.cs">
+      <DependentUpon>Notification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Banner.aspx.cs">
+      <DependentUpon>Banner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Banner.aspx.designer.cs">
+      <DependentUpon>Banner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bride_stories.aspx.cs">
+      <DependentUpon>Bride_stories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bride_stories.aspx.designer.cs">
+      <DependentUpon>Bride_stories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bride_stories_cate.aspx.cs">
+      <DependentUpon>Bride_stories_cate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bride_stories_cate.aspx.designer.cs">
+      <DependentUpon>Bride_stories_cate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Collections.aspx.cs">
+      <DependentUpon>Collections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Collections.aspx.designer.cs">
+      <DependentUpon>Collections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Delete_Product_Img.ashx.cs">
+      <DependentUpon>Delete_Product_Img.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FAQS.aspx.cs">
+      <DependentUpon>FAQS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FAQS.aspx.designer.cs">
+      <DependentUpon>FAQS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FAQ_Cate.aspx.cs">
+      <DependentUpon>FAQ_Cate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FAQ_Cate.aspx.designer.cs">
+      <DependentUpon>FAQ_Cate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Images_Product.aspx.cs">
+      <DependentUpon>Images_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Images_Product.aspx.designer.cs">
+      <DependentUpon>Images_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Info.aspx.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Info.aspx.designer.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Inquiries.aspx.cs">
+      <DependentUpon>Inquiries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Inquiries.aspx.designer.cs">
+      <DependentUpon>Inquiries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderProcess.aspx.cs">
+      <DependentUpon>OrderProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderProcess.aspx.designer.cs">
+      <DependentUpon>OrderProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Up_Img_Product.aspx.cs">
+      <DependentUpon>Up_Img_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Up_Img_Product.aspx.designer.cs">
+      <DependentUpon>Up_Img_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Wedding_Dress.aspx.cs">
+      <DependentUpon>Wedding_Dress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Wedding_Dress.aspx.designer.cs">
+      <DependentUpon>Wedding_Dress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\baseConnection.cs" />
+    <Compile Include="Common\baseModel.cs" />
+    <Compile Include="Common\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\baseRequest.cs" />
+    <Compile Include="Common\baseResponse.cs" />
+    <Compile Include="Common\CommonHelper.cs" />
+    <Compile Include="Common\HandlerRequest.ashx.cs">
+      <DependentUpon>HandlerRequest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\upload_img.ashx.cs">
+      <DependentUpon>upload_img.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\AboutUsController.cs" />
+    <Compile Include="Controller\BannerController.cs" />
+    <Compile Include="Controller\BrideStoriesController.cs" />
+    <Compile Include="Controller\CollectionController.cs" />
+    <Compile Include="Controller\FaqController.cs" />
+    <Compile Include="Controller\InfoController.cs" />
+    <Compile Include="Controller\InquiriesController.cs" />
+    <Compile Include="Controller\NewsController.cs" />
+    <Compile Include="Controller\OrderProcessController.cs" />
+    <Compile Include="Controller\UsersController.cs" />
+    <Compile Include="Controller\WeddingDressController.cs" />
+    <Compile Include="Handling\AboutUs_Handling.cs" />
+    <Compile Include="Handling\Banner_Handling.cs" />
+    <Compile Include="Handling\BrideStories_Handling.cs" />
+    <Compile Include="Handling\Collection_Handling.cs" />
+    <Compile Include="Handling\Faq_Handling.cs" />
+    <Compile Include="Handling\Info_Handling.cs" />
+    <Compile Include="Handling\Inquiries_Handling.cs" />
+    <Compile Include="Handling\News_Handling.cs" />
+    <Compile Include="Handling\OrderProcess_Handling.cs" />
+    <Compile Include="Handling\Users_Handling.cs" />
+    <Compile Include="Handling\WeddingDress_Handling.cs" />
+    <Compile Include="Models\AboutUs_Model.cs" />
+    <Compile Include="Models\Banner_Model.cs" />
+    <Compile Include="Models\BrideStories_Model.cs" />
+    <Compile Include="Models\Collection_Model.cs" />
+    <Compile Include="Models\Faq_Model.cs" />
+    <Compile Include="Models\Info_Model.cs" />
+    <Compile Include="Models\Inquiries_Model.cs" />
+    <Compile Include="Models\News_Model.cs" />
+    <Compile Include="Models\OrderProcess_Model.cs" />
+    <Compile Include="Models\Users_Model.cs" />
+    <Compile Include="Models\WeddingDress_Model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AboutUs_Repository.cs" />
+    <Compile Include="Repository\Banner_Repository.cs" />
+    <Compile Include="Repository\BrideStories_Repository.cs" />
+    <Compile Include="Repository\Collection_Repository.cs" />
+    <Compile Include="Repository\Faq_Repository.cs" />
+    <Compile Include="Repository\Info_Repository.cs" />
+    <Compile Include="Repository\Inquiries_Repository.cs" />
+    <Compile Include="Repository\News_Repository.cs" />
+    <Compile Include="Repository\OrderProcess_Repository.cs" />
+    <Compile Include="Repository\Users_Repository.cs" />
+    <Compile Include="Repository\WeddingDress_Repository.cs" />
+    <Compile Include="Views\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BridesStories.aspx.cs">
+      <DependentUpon>BridesStories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BridesStories.aspx.designer.cs">
+      <DependentUpon>BridesStories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BridesStoriesDetail.aspx.cs">
+      <DependentUpon>BridesStoriesDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BridesStoriesDetail.aspx.designer.cs">
+      <DependentUpon>BridesStoriesDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Collections.aspx.cs">
+      <DependentUpon>Collections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Collections.aspx.designer.cs">
+      <DependentUpon>Collections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Control\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Control\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Control\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Control\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dress.aspx.cs">
+      <DependentUpon>Dress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dress.aspx.designer.cs">
+      <DependentUpon>Dress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Favorites.aspx.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Favorites.aspx.designer.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Member.aspx.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Member.aspx.designer.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsDetail.aspx.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsDetail.aspx.designer.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderProcess.aspx.cs">
+      <DependentUpon>OrderProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\OrderProcess.aspx.designer.cs">
+      <DependentUpon>OrderProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TermsConditions.aspx.cs">
+      <DependentUpon>TermsConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TermsConditions.aspx.designer.cs">
+      <DependentUpon>TermsConditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\_layout.Master.cs">
+      <DependentUpon>_layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\_layout.Master.designer.cs">
+      <DependentUpon>_layout.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\HandlerRequest.ashx" />
+    <Content Include="Admin\AdminHandleRq.ashx" />
+    <Content Include="Admin\AdminHandler_list.ashx" />
+    <Content Include="Admin\AjaxUpload\Ajax_Upload.ashx" />
+    <Content Include="Admin\App_upload_Img_APP_LIST.ashx" />
+    <Content Include="Admin\App_upload_Img_APP_LIST_1.ashx" />
+    <Content Include="Admin\Bin\CuteEditor.dll.refresh" />
+    <Content Include="Admin\Bin\CuteEditor.ImageEditor.dll.refresh" />
+    <Content Include="Admin\Bin\cuteeditor.lic" />
+    <Content Include="Admin\Bin\ImageResizer.dll.refresh" />
+    <Content Include="Admin\Bin\NetSpell.SpellChecker.dll.refresh" />
+    <Content Include="Admin\Bin\Newtonsoft.Json.dll.refresh" />
+    <Content Include="Admin\Bin\UrlRewritingNet.UrlRewriter.dll.refresh" />
+    <Content Include="Admin\bower_components\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Admin\Delete_Product_Img.ashx" />
+    <Content Include="Admin\fonts\noto-sans\NotoSans_Bold.woff" />
+    <Content Include="Admin\fonts\noto-sans\NotoSans_gdi.woff" />
+    <Content Include="Admin\MasterPage.Master" />
+    <Content Include="Admin\Styles\font\summernote.eot" />
+    <Content Include="Admin\Styles\font\summernote.ttf" />
+    <Content Include="Admin\Styles\font\summernote.woff" />
+    <Content Include="Assets\font\roboto\Roboto-Bold.eot" />
+    <Content Include="Assets\font\roboto\Roboto-Bold.ttf" />
+    <Content Include="Assets\font\roboto\Roboto-Bold.woff" />
+    <Content Include="Assets\font\roboto\Roboto-Bold.woff2" />
+    <Content Include="Assets\font\roboto\Roboto-Light.eot" />
+    <Content Include="Assets\font\roboto\Roboto-Light.ttf" />
+    <Content Include="Assets\font\roboto\Roboto-Light.woff" />
+    <Content Include="Assets\font\roboto\Roboto-Light.woff2" />
+    <Content Include="Assets\font\roboto\Roboto-Medium.eot" />
+    <Content Include="Assets\font\roboto\Roboto-Medium.ttf" />
+    <Content Include="Assets\font\roboto\Roboto-Medium.woff" />
+    <Content Include="Assets\font\roboto\Roboto-Medium.woff2" />
+    <Content Include="Assets\font\roboto\Roboto-Regular.eot" />
+    <Content Include="Assets\font\roboto\Roboto-Regular.ttf" />
+    <Content Include="Assets\font\roboto\Roboto-Regular.woff" />
+    <Content Include="Assets\font\roboto\Roboto-Regular.woff2" />
+    <Content Include="Assets\font\roboto\Roboto-Thin.eot" />
+    <Content Include="Assets\font\roboto\Roboto-Thin.ttf" />
+    <Content Include="Assets\font\roboto\Roboto-Thin.woff" />
+    <Content Include="Assets\font\roboto\Roboto-Thin.woff2" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker.css.map" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker.min.css.map" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker.standalone.min.css.map" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker3.css.map" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker3.min.css.map" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="Assets\plugins\datepicker\css\bootstrap-datepicker3.standalone.min.css.map" />
+    <Content Include="Assets\scss\addons\_datatables.scss" />
+    <Content Include="Assets\scss\core\bootstrap\_functions.scss" />
+    <Content Include="Assets\scss\core\bootstrap\_variables.scss" />
+    <Content Include="Assets\scss\core\_colors.scss" />
+    <Content Include="Assets\scss\core\_global.scss" />
+    <Content Include="Assets\scss\core\_helpers.scss" />
+    <Content Include="Assets\scss\core\_masks.scss" />
+    <Content Include="Assets\scss\core\_mixins.scss" />
+    <Content Include="Assets\scss\core\_typography.scss" />
+    <Content Include="Assets\scss\core\_variables.scss" />
+    <Content Include="Assets\scss\core\_waves.scss" />
+    <Content Include="Assets\scss\free\_animations-basic.scss" />
+    <Content Include="Assets\scss\free\_animations-extended.scss" />
+    <Content Include="Assets\scss\free\_badges.scss" />
+    <Content Include="Assets\scss\free\_buttons.scss" />
+    <Content Include="Assets\scss\free\_cards.scss" />
+    <Content Include="Assets\scss\free\_carousels.scss" />
+    <Content Include="Assets\scss\free\_depreciated.scss" />
+    <Content Include="Assets\scss\free\_dropdowns.scss" />
+    <Content Include="Assets\scss\free\_footers.scss" />
+    <Content Include="Assets\scss\free\_forms.scss" />
+    <Content Include="Assets\scss\free\_input-group.scss" />
+    <Content Include="Assets\scss\free\_list-group.scss" />
+    <Content Include="Assets\scss\free\_modals.scss" />
+    <Content Include="Assets\scss\free\_msc.scss" />
+    <Content Include="Assets\scss\free\_navbars.scss" />
+    <Content Include="Assets\scss\free\_pagination.scss" />
+    <Content Include="Assets\scss\free\_tables.scss" />
+    <Content Include="Assets\scss\mdb.scss" />
+    <Content Include="Assets\scss\style.scss" />
+    <Content Include="Assets\scss\_custom-skin.scss" />
+    <Content Include="Assets\scss\_custom-styles.scss" />
+    <Content Include="Assets\scss\_custom-variables.scss" />
+    <Content Include="Common\upload_img1.ashx" />
+    <Content Include="Common\upload_img.ashx" />
+    <Content Include="Assets\font\GeosansLight\GeosansLight.eot" />
+    <Content Include="Assets\font\GeosansLight\GeosansLight.otf" />
+    <Content Include="Assets\font\GeosansLight\GeosansLight.ttf" />
+    <Content Include="Assets\font\GeosansLight\GeosansLight.woff" />
+    <Content Include="Assets\font\GeosansLight\GeosansLight.woff2" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="Views\_layout.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\HaiDen20241017001507 - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\img\browsers\" />
+    <Folder Include="Admin\img\headers\" />
+    <Folder Include="Assets\HinhAnh\WeddingDress\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65281</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65281/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

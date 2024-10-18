@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="_layout.master.cs" Inherits="HaiDen.Views._layout" %>
+
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truong Thanh Hai Bridal</title>
+    <link rel="shortcut icon" href="../Assets/img/resource/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link href="<%= Page.ResolveClientUrl("~/Assets/css/bootstrap.min.css")%>" rel="stylesheet" />
+    <link href="<%= Page.ResolveClientUrl("~/Assets/css/mdb.min.css")%>" rel="stylesheet" />
+    <link href="<%= Page.ResolveClientUrl("~/Assets/plugins/datepicker/css/bootstrap-datepicker3.min.css")%>" rel="stylesheet" />
+    <link href="<%= Page.ResolveClientUrl("~/Assets/scss/style.min.css")%>" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="Header" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <asp:ContentPlaceHolder ID="Content" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <script src="<%= Page.ResolveClientUrl("~/Assets/js/jquery-3.3.1.min.js")%>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Assets/js/popper.min.js")%>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Assets/js/bootstrap.min.js")%>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Assets/js/mdb.min.js")%>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Assets/plugins/datepicker/js/bootstrap-datepicker.min.js")%>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Common/common.js")%>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/Info_Script.js")%>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/Collection_Script.js")%>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/Users_Script.js")%>"></script>
+    <script>
+        $(document).ready(function () {
+            var Users_Script = new UsersScript();
+            Users_Script.User();
+            var Info_Script = new InfoScript();
+            Info_Script.init();
+            $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+                var $el = $(this);
+                var $parent = $(this).offsetParent(".dropdown-menu");
+                if (!$(this).next().hasClass('show')) {
+                    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                }
+                var $subMenu = $(this).next(".dropdown-menu");
+                $subMenu.toggleClass('show');
+
+                $(this).parent("li").toggleClass('show');
+
+                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                    $('.dropdown-menu .show').removeClass("show");
+                });
+
+                if (!$parent.parent().hasClass('navbar-nav')) {
+                    $el.next().css({ "top": $el[0].offsetTop, "left": $parent.outerWidth() + 5 });
+                }
+
+                return false;
+            });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="Footer" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>

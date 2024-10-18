@@ -1,0 +1,27 @@
+﻿[data-ma-header="teal"]:before, [data-ma-header="teal"] #header {
+    background-color: #ef5350;
+}
+[data-ma-header="teal"] .smm-alerts > li.active, [data-ma-header="teal"] .main-menu li.active > a {
+    color: #ef5350;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #673AB7;
+}
+.pagination > .active > a {
+    background-color: #f44336;
+}
+[data-lbg="teal"] {
+    background-color: #ef5350;
+}
+.palette-Teal.bg {
+    background-color: #be1a17;
+}
+.palette-Teal.text {
+    color: #be1a17;
+}
+.fg-line:not([class*=has-]):after {
+    background: #ef5350;
+}
+.modal[data-modal-color="lightgreen"] .modal-content {
+    background: #e85a58;
+}

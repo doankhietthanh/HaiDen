@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\admin\\app_code\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:admin\\app_code\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|c:\\users\\pc\\desktop\\haiden\\haiden-master\\admin\\app_code\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:admin\\app_code\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|c:\\users\\pc\\desktop\\haiden\\haiden-master\\admin\\app_code\\bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:admin\\app_code\\bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|c:\\users\\pc\\desktop\\haiden\\haiden-master\\repository\\weddingdress_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:repository\\weddingdress_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|c:\\users\\pc\\desktop\\haiden\\haiden-master\\admin\\images_product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:admin\\images_product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|c:\\users\\pc\\desktop\\haiden\\haiden-master\\admin\\up_img_product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:admin\\up_img_product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|c:\\users\\pc\\desktop\\haiden\\haiden-master\\admin\\up_img_product.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:admin\\up_img_product.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|c:\\users\\pc\\desktop\\haiden\\haiden-master\\scripts\\weddingdress_script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:scripts\\weddingdress_script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\admin\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{E96DC7D2-0783-4435-8262-EECD81BDE591}|HaiDen.csproj|solutionrelative:admin\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Up_Img_Product.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\Up_Img_Product.aspx.cs",
+              "RelativeDocumentMoniker": "Admin\\Up_Img_Product.aspx.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\Up_Img_Product.aspx.cs",
+              "RelativeToolTip": "Admin\\Up_Img_Product.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T16:21:15.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Up_Img_Product.aspx",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\Up_Img_Product.aspx",
+              "RelativeDocumentMoniker": "Admin\\Up_Img_Product.aspx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\Up_Img_Product.aspx",
+              "RelativeToolTip": "Admin\\Up_Img_Product.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-17T16:21:12.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Images_Product.aspx",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\Images_Product.aspx",
+              "RelativeDocumentMoniker": "Admin\\Images_Product.aspx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\Images_Product.aspx",
+              "RelativeToolTip": "Admin\\Images_Product.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-17T16:20:22.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BLL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\App_Code\\BLL.cs",
+              "RelativeDocumentMoniker": "Admin\\App_Code\\BLL.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\App_Code\\BLL.cs",
+              "RelativeToolTip": "Admin\\App_Code\\BLL.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAEwB4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T16:03:48.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataProvider.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\App_Code\\DataProvider.cs",
+              "RelativeDocumentMoniker": "Admin\\App_Code\\DataProvider.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\App_Code\\DataProvider.cs",
+              "RelativeToolTip": "Admin\\App_Code\\DataProvider.cs",
+              "ViewState": "AgIAAJYBAAAAAAAAAAAkwKgBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T19:07:47.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DAO.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\App_Code\\DAO.cs",
+              "RelativeDocumentMoniker": "Admin\\App_Code\\DAO.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\App_Code\\DAO.cs",
+              "RelativeToolTip": "Admin\\App_Code\\DAO.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAD4vykAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T19:07:08.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwA4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-16T19:03:49.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeddingDress_Script.js",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Scripts\\WeddingDress_Script.js",
+              "RelativeDocumentMoniker": "Scripts\\WeddingDress_Script.js",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Scripts\\WeddingDress_Script.js",
+              "RelativeToolTip": "Scripts\\WeddingDress_Script.js",
+              "ViewState": "AgIAAAoBAAAAAAAAAAAIwBIBAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-17T16:24:18.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeddingDress_Repository.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Repository\\WeddingDress_Repository.cs",
+              "RelativeDocumentMoniker": "Repository\\WeddingDress_Repository.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Repository\\WeddingDress_Repository.cs",
+              "RelativeToolTip": "Repository\\WeddingDress_Repository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAmwDoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T16:34:12.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LogIn.aspx",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\LogIn.aspx",
+              "RelativeDocumentMoniker": "Admin\\LogIn.aspx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HaiDen\\HaiDen-master\\Admin\\LogIn.aspx",
+              "RelativeToolTip": "Admin\\LogIn.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-16T18:58:45.433Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
