@@ -1,10 +1,10 @@
-﻿
+﻿const protocol = "http://";
 
 function postAjax(parameter, request, type, _this) {
 
     jQuery.ajax({
         // the URL for the request
-        url: "http://" + window.location.host + "/Common/HandlerRequest.ashx",
+        url: protocol + window.location.host + "/Common/HandlerRequest.ashx",
         // the data to send
         // (will be converted to a query string)
         data: parameter,
@@ -46,17 +46,17 @@ jQuery(window).bind('load', function () {
         if ((typeof this.naturalWidth != "undefined" &&
             this.naturalWidth == 0)
             || this.readyState == 'uninitialized') {
-            jQuery(this).attr('src', 'http://' + window.document.location.host + '/Common/thumbnail-default.png');
+            jQuery(this).attr('src', protocol + window.document.location.host + '/Common/thumbnail-default.png');
             jQuery(this).css({ 'border': '1px solid #f3f3f3' });
         }
     });
 })
 var _variable = {
-    url: 'http://' + window.location.host,
+    url: protocol + window.location.host,
     html: '',
     html1: '',
     PathImg: '/Assets/HinhAnh/',
-    urlImg: 'http://' + window.location.host + '/Assets/HinhAnh/',
+    urlImg: protocol + window.location.host + '/Assets/HinhAnh/',
     Lang: 'vi',
     ListInfo: []
 }

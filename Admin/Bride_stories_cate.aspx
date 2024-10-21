@@ -367,7 +367,6 @@
         //==================UPLOAD IMG========================
 
         function uploadimg(ele) {
-
             new AjaxUpload('#UploadButton_' + ele + '', {
                 action: 'App_upload_Img_' + ele + '.ashx?file=0&path=' + path,
                 onComplete: function (file, response) {

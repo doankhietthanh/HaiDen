@@ -20,7 +20,7 @@
                 <div class="col-lg-4">
                     <span><i class="fa fa-map-marker"></i></span>
                     <p class="adress">
-                        31A Nguyen Van Mai St, Dist 3
+                        19 Nhieu Tu, Ward 7, District Phu Nhuan
                             <br />
                         Ho Chi Minh City
                     </p>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-lg-4">
                     <span><i class="fa fa-phone"></i></span>
-                    <p><a class="phone" href="tel:0123123123">0123123123</a></p>
+                    <p><a class="phone" href="tel:+84 358 224340">+84 358 224340</a></p>
                 </div>
             </div>
         </div>
